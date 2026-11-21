@@ -53,7 +53,7 @@ EOF
         failure {
             echo "FAILURE: Build #${BUILD_NUMBER} failed!"
         }
-        always {
+        cleanup {
             sh 'rm -rf src tests release'
         }
     }
